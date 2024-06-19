@@ -15,6 +15,8 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            board.click(pygame.mouse.get_pos())
     # background color
     # TODO move into event loop to only re-render when needed
     screen.fill((135, 203, 245))
